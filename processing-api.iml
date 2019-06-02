@@ -147,5 +147,19 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.20" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/opencv/opencv-346.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/src/main/resources/opencv" />
+        </NATIVE>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/opencv/opencv-346.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

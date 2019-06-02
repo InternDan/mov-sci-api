@@ -31,6 +31,8 @@ public class PictureController {
     @ApiOperation(value = "Test GET Method", response = String.class)
     @GetMapping
     public String working(){
+        //for testing only
+        FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame();
         return "Working!";
     }
 
