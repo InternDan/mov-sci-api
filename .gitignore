@@ -1,2 +1,3 @@
 *.azureauth
 *.properties
+.idea/*
