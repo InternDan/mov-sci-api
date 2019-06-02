@@ -1,6 +1,5 @@
 package com.movsci.processingapi;
 
-import org.opencv.core.Core;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

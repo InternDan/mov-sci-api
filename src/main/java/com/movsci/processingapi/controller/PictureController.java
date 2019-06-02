@@ -7,6 +7,7 @@ import com.movsci.processingapi.service.PictureService;
 import com.movsci.processingapi.service.VideoService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,8 @@ public class PictureController {
 
     private PictureService pictureService;
     private VideoService videoService;
+    @Value("${secretKey}")
+    private String secretKey;
 
     @Autowired
     public void PictureController(
@@ -32,16 +35,15 @@ public class PictureController {
     @GetMapping
     public String working(){
         //for testing only
-        FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame();
+        FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame("dongTracked.mp4");
         return "Working!";
     }
 
     @ApiOperation(value = "Create first frame of video",response = FirstFrameResponse.class)
     @PostMapping(path = "/FirstFrame", consumes="application/json")
     public ResponseEntity<?> createFirstFrameOfVideo(@RequestBody FirstFrameRequest firstFrameRequest){
-        FirstFrameResponse firstFrameResponse = new FirstFrameResponse();
-        if(firstFrameRequest.getSecretKey().contentEquals(SecurityConfig.secretKey)){
-            firstFrameResponse = pictureService.createFirstFrame();
+        if(firstFrameRequest.getSecretKey().contentEquals(secretKey)){
+            FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame(firstFrameRequest.getVideoFilePath());
             return ResponseEntity.ok(firstFrameResponse);
         }
         else{
