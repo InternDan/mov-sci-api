@@ -8,6 +8,6 @@ import lombok.*;
 @Getter
 @Setter
 public class FirstFrameRequest {
-    private String videoFilePath;
+    private String videoFileName;
     private String secretKey;
 }

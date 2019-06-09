@@ -40,17 +40,15 @@ public class PictureController {
     }
 
     @ApiOperation(value = "Create first frame of video",response = FirstFrameResponse.class)
-    @PostMapping(path = "/FirstFrame", consumes="application/json")
+    @PostMapping(path = "/FirstFrame", consumes="application/json",produces = "application/json")
     public ResponseEntity<?> createFirstFrameOfVideo(@RequestBody FirstFrameRequest firstFrameRequest){
         if(firstFrameRequest.getSecretKey().contentEquals(secretKey)){
-            FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame(firstFrameRequest.getVideoFilePath());
+            FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame(firstFrameRequest.getVideoFileName());
             return ResponseEntity.ok(firstFrameResponse);
         }
         else{
             return new ResponseEntity<String>("Unauthorized", HttpStatus.UNAUTHORIZED);
         }
-
-
     }
 
 }

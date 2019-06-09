@@ -1,3 +1,5 @@
 *.azureauth
 *.properties
 .idea/*
+*.mp4
+*.png
