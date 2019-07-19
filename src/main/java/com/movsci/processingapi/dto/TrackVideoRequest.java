@@ -8,7 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 public class TrackVideoRequest {
-    String videoFileName;
+    String blobName;
     String secretKey;
     String pointDefs;
 }

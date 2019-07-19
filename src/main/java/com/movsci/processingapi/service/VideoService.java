@@ -36,7 +36,7 @@ public class VideoService extends SharedService {
             log.info("Video file " + downloadedFile.getName() + " opened.");
         }
 
-        boolean success = VideoHelpers.trackVideo(cap,pointDefs);
+        boolean success = VideoHelpers.trackVideo(cap,pointDefs,downloadedFile.getAbsolutePath());
 
         return new TrackVideoResponse();
     }

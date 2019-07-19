@@ -11,10 +11,19 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/api/v1/video")
 public class VideoController {
 
     private VideoService videoService;
+
+    public VideoController(VideoService videoService){
+        this.videoService = videoService;
+    }
+
     @Value("${secretKey}")
     private String secretKey;
 
@@ -23,7 +32,7 @@ public class VideoController {
     public ResponseEntity<?> trackVideo(@RequestBody TrackVideoRequest trackVideoRequest){
         if(trackVideoRequest.getSecretKey().contentEquals(secretKey)){
             TrackVideoResponse trackVideoResponse = videoService.trackVideo(
-                    trackVideoRequest.getVideoFileName(),
+                    trackVideoRequest.getBlobName(),
                     trackVideoRequest.getPointDefs());
             return ResponseEntity.ok(trackVideoResponse);
         }
