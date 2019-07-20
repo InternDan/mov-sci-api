@@ -2,6 +2,7 @@ package com.movsci.processingapi.helpers;
 
 import com.movsci.processingapi.Model.MovSciPoint;
 import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
@@ -16,38 +17,38 @@ public class FrameHelpers {
     public static Mat DrawOnFrame(Mat frame, ArrayList<MovSciPoint> movSciPoints) throws Exception {
 
         int ptCount = 0;
-        for(MovSciPoint point : movSciPoints){
+        while(ptCount < movSciPoints.size()){
+            MovSciPoint point = movSciPoints.get(ptCount);
             ArrayList<MovSciPoint> in = new ArrayList<>();
-            switch(point.getType()){
-                case "pt":
-                    frame = drawPoint(frame,movSciPoints.get(ptCount));
-                    ptCount = ptCount + 1;
-                case "ln":
-                    in.add(movSciPoints.get(ptCount));
-                    in.add(movSciPoints.get(ptCount+1));
-                    frame = drawLine(frame,in);
-                    ptCount = ptCount + 2;
-                case "ang2":
-                    in.add(movSciPoints.get(ptCount));
-                    in.add(movSciPoints.get(ptCount+1));
-                    frame = draw2PointAngle(frame,in);
-                    ptCount = ptCount + 2;
-                case "ang3":
-                    in.add(movSciPoints.get(ptCount));
-                    in.add(movSciPoints.get(ptCount+1));
-                    in.add(movSciPoints.get(ptCount+2));
-                    frame = draw3PointAngle(frame,in);
-                    ptCount = ptCount + 3;
-                case "ang4":
-                    in.add(movSciPoints.get(ptCount));
-                    in.add(movSciPoints.get(ptCount+1));
-                    in.add(movSciPoints.get(ptCount+2));
-                    in.add(movSciPoints.get(ptCount+3));
-                    frame = draw4PointAngle(frame,in);
-                    ptCount = ptCount + 4;
-                default:
-                    //todo: put in better exception
-                    throw new Exception();
+            if(point.getType().equals("pt")) {
+                frame = drawPoint(frame, movSciPoints.get(ptCount));
+                ptCount = ptCount + 1;
+            }else if(point.getType().equals("ln")) {
+                in.add(movSciPoints.get(ptCount));
+                in.add(movSciPoints.get(ptCount + 1));
+                frame = drawLine(frame, in);
+                ptCount = ptCount + 2;
+            }else if(point.getType().equals("ang2")) {
+                in.add(movSciPoints.get(ptCount));
+                in.add(movSciPoints.get(ptCount + 1));
+                frame = draw2PointAngle(frame, in);
+                ptCount = ptCount + 2;
+            }else if(point.getType().equals("ang3")) {
+                in.add(movSciPoints.get(ptCount));
+                in.add(movSciPoints.get(ptCount + 1));
+                in.add(movSciPoints.get(ptCount + 2));
+                frame = draw3PointAngle(frame, in);
+                ptCount = ptCount + 3;
+            }else if(point.getType().equals("ang4")) {
+                in.add(movSciPoints.get(ptCount));
+                in.add(movSciPoints.get(ptCount + 1));
+                in.add(movSciPoints.get(ptCount + 2));
+                in.add(movSciPoints.get(ptCount + 3));
+                frame = draw4PointAngle(frame, in);
+                ptCount = ptCount + 4;
+            }else{
+                //todo: put in better exception
+                throw new Exception();
             }
         }
         return frame;
@@ -106,6 +107,10 @@ public class FrameHelpers {
         return frame;
     }
 
+    private static Mat trackPoints(Mat prevFrame, Mat currFrame, ArrayList<MovSciPoint> movSciPointsInitial){
+
+        return currFrame;
+    }
     //todo: draw other shapes
 
 }
