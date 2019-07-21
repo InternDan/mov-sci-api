@@ -31,13 +31,29 @@ public class VideoService extends SharedService {
         cap.open(downloadedFile.getName());
         if(!cap.isOpened()){
             log.error("Could not open video file");
-            return new TrackVideoResponse("failed to open file",null);
+            return new TrackVideoResponse(null);
         }else{
             log.info("Video file " + downloadedFile.getName() + " opened.");
         }
 
         boolean success = VideoHelpers.trackVideo(cap,pointDefs,downloadedFile);
 
-        return new TrackVideoResponse();
+        if(success) {
+            String trackedName = "Tracked-" + downloadedFile.getName();
+            try {
+                uploadFile(trackedName);
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            } catch (InvalidKeyException e) {
+                e.printStackTrace();
+            } catch (StorageException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return new TrackVideoResponse(trackedName);
+        }else{
+            return new TrackVideoResponse(null);
+        }
     }
 }

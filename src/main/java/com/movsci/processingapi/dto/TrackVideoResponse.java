@@ -8,6 +8,5 @@ import lombok.*;
 @Getter
 @Setter
 public class TrackVideoResponse {
-    private String success;
     private String fileName;
 }
