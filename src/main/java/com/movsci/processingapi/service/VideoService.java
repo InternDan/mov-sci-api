@@ -1,6 +1,7 @@
 package com.movsci.processingapi.service;
 
 import com.microsoft.azure.storage.StorageException;
+import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.dto.FirstFrameResponse;
 import com.movsci.processingapi.dto.TrackVideoResponse;
 import com.movsci.processingapi.helpers.VideoHelpers;
@@ -17,7 +18,7 @@ import java.security.InvalidKeyException;
 @Slf4j
 public class VideoService extends SharedService {
 
-    public TrackVideoResponse trackVideo(String blobName, String pointDefs){
+    public TrackVideoResponse trackVideo(String blobName, String pointDefs, DrawingInformation drawingInformation){
 
         File downloadedFile = null;
         try {
@@ -36,7 +37,7 @@ public class VideoService extends SharedService {
             log.info("Video file " + downloadedFile.getName() + " opened.");
         }
 
-        boolean success = VideoHelpers.trackVideo(cap,pointDefs,downloadedFile);
+        boolean success = VideoHelpers.trackVideo(cap,pointDefs,drawingInformation,downloadedFile);
 
         if(success) {
             String trackedName = "Tracked-" + downloadedFile.getName();

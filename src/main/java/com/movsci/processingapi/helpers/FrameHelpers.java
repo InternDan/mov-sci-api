@@ -1,5 +1,6 @@
 package com.movsci.processingapi.helpers;
 
+import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.Model.MovSciPoint;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint2f;
@@ -14,39 +15,42 @@ public class FrameHelpers {
 
     private static DecimalFormat df = new DecimalFormat("###.#");
 
-    public static Mat DrawOnFrame(Mat frame, ArrayList<MovSciPoint> movSciPoints) throws Exception {
+    public static Mat DrawOnFrame(Mat frame, ArrayList<ArrayList<MovSciPoint>> movSciPointsArray, DrawingInformation drawingInformation, int frameCount) throws Exception {
 
+        ArrayList<MovSciPoint> movSciPoints = movSciPointsArray.get(movSciPointsArray.size()-1);//TODO: maybe not -1
+        //TODO: fix not drawing most recent point
+        frame = drawTrailingPoints(frame,movSciPointsArray,drawingInformation,frameCount);
         int ptCount = 0;
-        while(ptCount < movSciPoints.size()){
+        while (ptCount < movSciPoints.size()) {
             MovSciPoint point = movSciPoints.get(ptCount);
             ArrayList<MovSciPoint> in = new ArrayList<>();
-            if(point.getType().equals("pt")) {
+            if (point.getType().equals("pt")) {
                 frame = drawPoint(frame, movSciPoints.get(ptCount));
                 ptCount = ptCount + 1;
-            }else if(point.getType().equals("ln")) {
+            } else if (point.getType().equals("ln")) {
                 in.add(movSciPoints.get(ptCount));
                 in.add(movSciPoints.get(ptCount + 1));
                 frame = drawLine(frame, in);
                 ptCount = ptCount + 2;
-            }else if(point.getType().equals("ang2")) {
+            } else if (point.getType().equals("ang2")) {
                 in.add(movSciPoints.get(ptCount));
                 in.add(movSciPoints.get(ptCount + 1));
                 frame = draw2PointAngle(frame, in);
                 ptCount = ptCount + 2;
-            }else if(point.getType().equals("ang3")) {
+            } else if (point.getType().equals("ang3")) {
                 in.add(movSciPoints.get(ptCount));
                 in.add(movSciPoints.get(ptCount + 1));
                 in.add(movSciPoints.get(ptCount + 2));
                 frame = draw3PointAngle(frame, in);
                 ptCount = ptCount + 3;
-            }else if(point.getType().equals("ang4")) {
+            } else if (point.getType().equals("ang4")) {
                 in.add(movSciPoints.get(ptCount));
                 in.add(movSciPoints.get(ptCount + 1));
                 in.add(movSciPoints.get(ptCount + 2));
                 in.add(movSciPoints.get(ptCount + 3));
                 frame = draw4PointAngle(frame, in);
                 ptCount = ptCount + 4;
-            }else{
+            } else {
                 //todo: put in better exception
                 throw new Exception();
             }
@@ -61,6 +65,24 @@ public class FrameHelpers {
                 movSciPoint.getColor(),
                 movSciPoint.getThickness(),
                 movSciPoint.getLineType());
+        return frame;
+    }
+
+    //todo: read in trailing point color
+    private static Mat drawTrailingPoints(Mat frame, ArrayList<ArrayList<MovSciPoint>> movSciPointArray, DrawingInformation drawingInformation, int frameCount){
+        for(int i = 1; i <= frameCount; i++){
+            for(int j = 1; j < movSciPointArray.size(); j++){
+                ArrayList<MovSciPoint> movSciPoints = movSciPointArray.get(movSciPointArray.size()-(j));
+                for(int k=0; k < movSciPoints.size(); k++){
+                    MovSciPoint pt = movSciPoints.get(k);
+                    if(pt.getType().equals("pt") && i < pt.getTrailingPoints()){
+                        pt.setColor(drawingInformation.getColorTrailingPoint());
+                        pt.setRadius(drawingInformation.getTrailingPointSize());
+                        frame = drawPoint(frame,pt);
+                    }
+                }
+            }
+        }
         return frame;
     }
 
@@ -107,10 +129,6 @@ public class FrameHelpers {
         return frame;
     }
 
-    private static Mat trackPoints(Mat prevFrame, Mat currFrame, ArrayList<MovSciPoint> movSciPointsInitial){
-
-        return currFrame;
-    }
     //todo: draw other shapes
 
 }

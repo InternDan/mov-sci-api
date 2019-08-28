@@ -1,5 +1,6 @@
 package com.movsci.processingapi.helpers;
 
+import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.Model.MovSciPoint;
 import lombok.extern.slf4j.Slf4j;
 import org.opencv.core.*;
@@ -20,7 +21,7 @@ import static org.opencv.core.TermCriteria.COUNT;
 @Slf4j
 public class VideoHelpers {
 
-    public static Boolean trackVideo(VideoCapture cap, String pointDefs, File downloadedFile){
+    public static Boolean trackVideo(VideoCapture cap, String pointDefs, DrawingInformation drawingInformation, File downloadedFile){
         //set output vid properties
         Size frameSize = new Size((int) cap.get(Videoio.CAP_PROP_FRAME_WIDTH), (int) cap.get(Videoio.CAP_PROP_FRAME_HEIGHT));
         double fps = cap.get(Videoio.CAP_PROP_FPS);
@@ -33,14 +34,16 @@ public class VideoHelpers {
         //parse input pointDefs - iterate through by number of inputs per point
         List<String> str = Arrays.asList(pointDefs.replaceAll("\\(","").replaceAll("\\)","").split(","));
         List<Integer> numbersInt = new ArrayList<>();
-        for (int i=0; i<str.size(); i=i+7) {
+        for (int i=0; i<str.size(); i=str.size()) {
             MovSciPoint pt = new MovSciPoint();
             pt.setType(str.get(i));
             pt.setColor(new Scalar(Integer.parseInt(str.get(i+1)),Integer.parseInt(str.get(i+2)),Integer.parseInt(str.get(i+3)),0));
-            pt.setRadius(Integer.parseInt(str.get(i+4)));
-            pt.setPoint(new Point(Double.parseDouble(str.get(i+5)),Double.parseDouble(str.get(i+6))));
+            pt.setTrailingPoints(Integer.parseInt(str.get(i+4)));
+            pt.setRadius(Integer.parseInt(str.get(i+5)));
+            pt.setPoint(new Point(Double.parseDouble(str.get(i+6)),Double.parseDouble(str.get(i+7))));
             initialPoints.add(pt);
         }
+        points.add(initialPoints);
         int numPoints = points.size();
 
         //set output video
@@ -56,7 +59,7 @@ public class VideoHelpers {
             if(frame == 0){
                 //draw stuff on nextMat with initialPoints and then
                 try {
-                    FrameHelpers.DrawOnFrame(nextMat,initialPoints);
+                    FrameHelpers.DrawOnFrame(nextMat,points,drawingInformation,frame);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -70,7 +73,7 @@ public class VideoHelpers {
                     points.add(nextPoints);
                     initialPoints.clear();
                     initialPoints.addAll(nextPoints);
-                    FrameHelpers.DrawOnFrame(nextMat,nextPoints);
+                    FrameHelpers.DrawOnFrame(nextMat,points,drawingInformation,frame);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

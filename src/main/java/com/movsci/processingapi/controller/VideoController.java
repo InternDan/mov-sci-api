@@ -1,11 +1,14 @@
 package com.movsci.processingapi.controller;
 
+import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.dto.FirstFrameRequest;
 import com.movsci.processingapi.dto.FirstFrameResponse;
 import com.movsci.processingapi.dto.TrackVideoRequest;
 import com.movsci.processingapi.dto.TrackVideoResponse;
+import com.movsci.processingapi.helpers.MathHelpers;
 import com.movsci.processingapi.service.VideoService;
 import io.swagger.annotations.ApiOperation;
+import org.opencv.core.Scalar;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +36,11 @@ public class VideoController {
         if(trackVideoRequest.getSecretKey().contentEquals(secretKey)){
             TrackVideoResponse trackVideoResponse = videoService.trackVideo(
                     trackVideoRequest.getBlobName(),
-                    trackVideoRequest.getPointDefs());
+                    trackVideoRequest.getPointDefs(),
+                    new DrawingInformation(MathHelpers.parseTriplet(trackVideoRequest.getColorTrailingPoint(),0)
+                            ,MathHelpers.parseTriplet(trackVideoRequest.getColorText(),0)
+                            ,MathHelpers.parseTriplet(trackVideoRequest.getColorAngleText(),0)
+                            ,Integer.valueOf(trackVideoRequest.getSizeTrailingPoint())));
             return ResponseEntity.ok(trackVideoResponse);
         }
         else{

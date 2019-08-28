@@ -2,17 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_7_2_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/DrawingInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/processing-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/dto/TrackVideoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/dto/TrackVideoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/controller/VideoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/dto/TrackVideoRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/dto/TrackVideoRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/FrameHelpers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/FrameHelpers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/VideoHelpers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/VideoHelpers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/service/VideoService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +41,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1PCgkIcsgJdusfubtnMekpBO2ma" />
   <component name="ProjectLevelVcsManager">
@@ -112,6 +126,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/PictureService.java</url>
           <line>48</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

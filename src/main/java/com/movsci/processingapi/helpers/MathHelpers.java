@@ -2,6 +2,7 @@ package com.movsci.processingapi.helpers;
 
 import com.movsci.processingapi.Model.MovSciPoint;
 import org.opencv.core.Point;
+import org.opencv.core.Scalar;
 
 import java.util.ArrayList;
 
@@ -122,5 +123,9 @@ public class MathHelpers {
             return (-1 * Math.log(((double) A) / ((double) B)));
         else
             return 0;
+    }
+
+    public static Scalar parseTriplet(String triplet, double fourth){
+        return new Scalar(Double.valueOf(triplet.charAt(1)),Double.valueOf(triplet.charAt(3)),Double.valueOf(triplet.charAt(5)), fourth);
     }
 }
