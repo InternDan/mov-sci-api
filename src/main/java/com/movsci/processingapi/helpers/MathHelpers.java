@@ -126,6 +126,9 @@ public class MathHelpers {
     }
 
     public static Scalar parseTriplet(String triplet, double fourth){
-        return new Scalar(Double.valueOf(triplet.charAt(1)),Double.valueOf(triplet.charAt(3)),Double.valueOf(triplet.charAt(5)), fourth);
+        String trip = triplet.substring(1,triplet.length()-1);
+        String[] trips = trip.split(",");
+        Scalar scalar = new Scalar(Double.valueOf(trips[0]),Double.valueOf(trips[1]),Double.valueOf(trips[2]), fourth);
+        return scalar;
     }
 }

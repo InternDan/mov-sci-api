@@ -2,14 +2,20 @@ package com.movsci.processingapi.helpers;
 
 import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.Model.MovSciPoint;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfPoint2f;
-import org.opencv.core.Point;
-import org.opencv.core.Scalar;
+import org.opencv.core.*;
+import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
+import static org.opencv.imgcodecs.Imgcodecs.imwrite;
 
 public class FrameHelpers {
 
@@ -20,12 +26,14 @@ public class FrameHelpers {
         ArrayList<MovSciPoint> movSciPoints = movSciPointsArray.get(movSciPointsArray.size()-1);//TODO: maybe not -1
         //TODO: fix not drawing most recent point
         frame = drawTrailingPoints(frame,movSciPointsArray,drawingInformation,frameCount);
+        //imwrite("c:\\users\\buffa\\desktop\\myImg.tif",frame);
         int ptCount = 0;
         while (ptCount < movSciPoints.size()) {
             MovSciPoint point = movSciPoints.get(ptCount);
             ArrayList<MovSciPoint> in = new ArrayList<>();
             if (point.getType().equals("pt")) {
                 frame = drawPoint(frame, movSciPoints.get(ptCount));
+                imwrite("c:\\users\\buffa\\desktop\\myImg.tif",frame);
                 ptCount = ptCount + 1;
             } else if (point.getType().equals("ln")) {
                 in.add(movSciPoints.get(ptCount));
@@ -74,8 +82,8 @@ public class FrameHelpers {
             for(int j = 1; j < movSciPointArray.size(); j++){
                 ArrayList<MovSciPoint> movSciPoints = movSciPointArray.get(movSciPointArray.size()-(j));
                 for(int k=0; k < movSciPoints.size(); k++){
-                    MovSciPoint pt = movSciPoints.get(k);
-                    if(pt.getType().equals("pt") && i < pt.getTrailingPoints()){
+                    MovSciPoint pt = new MovSciPoint(movSciPoints.get(k));
+                    if(pt.getType().equals("pt") && i < pt.getTrailingPoints() && j < pt.getTrailingPoints()){
                         pt.setColor(drawingInformation.getColorTrailingPoint());
                         pt.setRadius(drawingInformation.getTrailingPointSize());
                         frame = drawPoint(frame,pt);
@@ -128,7 +136,6 @@ public class FrameHelpers {
         Imgproc.putText(frame,df.format(ang),movSciPoints.get(0).getPoint(),3,3,new Scalar(200,200,200,0),2,1,false);
         return frame;
     }
-
     //todo: draw other shapes
 
 }

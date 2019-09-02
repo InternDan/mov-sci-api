@@ -25,6 +25,7 @@ public class VideoHelpers {
         //set output vid properties
         Size frameSize = new Size((int) cap.get(Videoio.CAP_PROP_FRAME_WIDTH), (int) cap.get(Videoio.CAP_PROP_FRAME_HEIGHT));
         double fps = cap.get(Videoio.CAP_PROP_FPS);
+        double numFrames = cap.get(Videoio.CAP_PROP_FRAME_COUNT);
 
         //initialize stuff needed for tracking
         ArrayList<ArrayList<MovSciPoint>> points = new ArrayList<>();
@@ -79,10 +80,14 @@ public class VideoHelpers {
                 }
                 Write(nextMat,videoWriter);
                 prevMat = nextMat.clone();
+                frame++;
             }
+            double percent = frame/numFrames;
+            log.info(Double.toString(percent));
         }
         videoWriter.release();
         cap.release();
+        log.info("Capture released");
         return true;
     }
 
@@ -94,7 +99,7 @@ public class VideoHelpers {
         MatOfPoint2f nextFeatures = new MatOfPoint2f();
         MatOfByte status = new MatOfByte();
         MatOfFloat err = new MatOfFloat();
-        Size winSize = new Size(20, 20);//can be customized
+        Size winSize = new Size(50, 50);//can be customized
         double epsilon = 0.001;
         TermCriteria termCrit = new TermCriteria(COUNT, 20, epsilon);
         int maxLevel = 3;

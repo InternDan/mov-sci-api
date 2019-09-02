@@ -17,4 +17,14 @@ public class MovSciPoint {
     int lineType = 8;
     int radius = 0;//radius
     Point point;//x,y
+
+    public MovSciPoint(MovSciPoint movSciPoint){
+        this.type = movSciPoint.getType();
+        this.trailingPoints = movSciPoint.getTrailingPoints();
+        this.color = movSciPoint.getColor();
+        this.thickness = movSciPoint.getThickness();
+        this.lineType = movSciPoint.getLineType();
+        this.radius = movSciPoint.getRadius();
+        this.point = movSciPoint.getPoint();
+    }
 }
