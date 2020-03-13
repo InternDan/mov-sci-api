@@ -35,7 +35,7 @@ public class PictureController {
     @GetMapping
     public String working(){
         //for testing only
-        FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame("dongTracked.mp4");
+        FirstFrameResponse firstFrameResponse = pictureService.createFirstFrame("1edaa588-1d09-49ee-b795-0995ab9aca4c.mp4");
         return "Working!";
     }
 

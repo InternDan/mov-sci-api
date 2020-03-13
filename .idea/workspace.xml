@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/opencv/Imshow.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/DrawingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/DrawingInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/MovSciPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/MovSciPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/Model/DrawingInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/Model/DrawingInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/Model/MovSciPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/Model/MovSciPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/FrameHelpers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/FrameHelpers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/MathHelpers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/MathHelpers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/VideoHelpers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movsci/processingapi/helpers/VideoHelpers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/processing-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/processing-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/opencv/Imshow.jar" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -48,33 +48,29 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ImShow-Java-OpenCV-master/ImShow_JCV" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources" />
       <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources\azure" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="ProcessingApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -95,6 +91,18 @@
         <item itemvalue="Application.ProcessingApiApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -121,6 +129,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="734" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584133881549">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="734" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584133881549" />
+    <state x="960" y="440" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584133310587">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="960" y="440" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584133310587" />
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom" timestamp="1584133640092">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
+    <state width="2517" height="320" key="GridCell.Tab.0.center" timestamp="1584133640092">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="320" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
+    <state width="2517" height="320" key="GridCell.Tab.0.left" timestamp="1584133640092">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="320" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
+    <state width="2517" height="320" key="GridCell.Tab.0.right" timestamp="1584133640092">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="320" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
+    <state x="127" y="279" key="SettingsEditor" timestamp="1578454680754">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="127" y="279" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1578454680754" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
