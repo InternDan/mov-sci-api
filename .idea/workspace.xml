@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/processing-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/processing-api.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/opencv/Imshow.jar" beforeDir="false" />
-    </list>
+    <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,22 +130,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="960" y="440" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584133310587" />
-    <state width="2517" height="320" key="GridCell.Tab.0.bottom" timestamp="1584133640092">
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom" timestamp="1584134008808">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="320" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
-    <state width="2517" height="320" key="GridCell.Tab.0.center" timestamp="1584133640092">
+    <state width="2517" height="320" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1584134008808" />
+    <state width="2517" height="320" key="GridCell.Tab.0.center" timestamp="1584134008808">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="320" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
-    <state width="2517" height="320" key="GridCell.Tab.0.left" timestamp="1584133640092">
+    <state width="2517" height="320" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1584134008808" />
+    <state width="2517" height="320" key="GridCell.Tab.0.left" timestamp="1584134008808">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="320" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
-    <state width="2517" height="320" key="GridCell.Tab.0.right" timestamp="1584133640092">
+    <state width="2517" height="320" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1584134008808" />
+    <state width="2517" height="320" key="GridCell.Tab.0.right" timestamp="1584134008808">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="320" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1584133640092" />
+    <state width="2517" height="320" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1584134008808" />
     <state x="127" y="279" key="SettingsEditor" timestamp="1578454680754">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
