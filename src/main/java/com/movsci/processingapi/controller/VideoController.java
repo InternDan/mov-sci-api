@@ -9,6 +9,7 @@ import com.movsci.processingapi.helpers.MathHelpers;
 import com.movsci.processingapi.service.VideoService;
 import io.swagger.annotations.ApiOperation;
 import org.opencv.core.Scalar;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,11 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/video")
 public class VideoController {
 
+    @Autowired
     private VideoService videoService;
-
-    public VideoController(VideoService videoService){
-        this.videoService = videoService;
-    }
 
     @Value("${secretKey}")
     private String secretKey;
@@ -34,13 +32,8 @@ public class VideoController {
     @PostMapping(path = "/TrackVideo", consumes="application/json",produces = "application/json")
     public ResponseEntity<?> trackVideo(@RequestBody TrackVideoRequest trackVideoRequest){
         if(trackVideoRequest.getSecretKey().contentEquals(secretKey)){
-            TrackVideoResponse trackVideoResponse = videoService.trackVideo(
-                    trackVideoRequest.getBlobName(),
-                    trackVideoRequest.getPointDefs(),
-                    new DrawingInformation(MathHelpers.parseTriplet(trackVideoRequest.getColorTrailingPoint(),0)
-                            ,MathHelpers.parseTriplet(trackVideoRequest.getColorText(),0)
-                            ,MathHelpers.parseTriplet(trackVideoRequest.getColorAngleText(),0)
-                            ,Integer.valueOf(trackVideoRequest.getSizeTrailingPoint())));
+            TrackVideoResponse trackVideoResponse = videoService.trackVideo(trackVideoRequest);
+
             return ResponseEntity.ok(trackVideoResponse);
         }
         else{
@@ -48,3 +41,4 @@ public class VideoController {
         }
     }
 }
+

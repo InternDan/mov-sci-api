@@ -3,7 +3,9 @@ package com.movsci.processingapi.service;
 import com.microsoft.azure.storage.StorageException;
 import com.movsci.processingapi.Model.DrawingInformation;
 import com.movsci.processingapi.dto.FirstFrameResponse;
+import com.movsci.processingapi.dto.TrackVideoRequest;
 import com.movsci.processingapi.dto.TrackVideoResponse;
+import com.movsci.processingapi.helpers.MathHelpers;
 import com.movsci.processingapi.helpers.VideoHelpers;
 import lombok.extern.slf4j.Slf4j;
 import org.opencv.videoio.VideoCapture;
@@ -18,7 +20,14 @@ import java.security.InvalidKeyException;
 @Slf4j
 public class VideoService extends SharedService {
 
-    public TrackVideoResponse trackVideo(String blobName, String pointDefs, DrawingInformation drawingInformation){
+    public TrackVideoResponse trackVideo(TrackVideoRequest trackVideoRequest){
+
+        String blobName =trackVideoRequest.getBlobName();
+        String pointDefs = trackVideoRequest.getPointDefs();
+        DrawingInformation drawingInformation = new DrawingInformation(MathHelpers.parseTriplet(trackVideoRequest.getColorTrailingPoint(),0)
+                ,MathHelpers.parseTriplet(trackVideoRequest.getColorText(),0)
+                , MathHelpers.parseTriplet(trackVideoRequest.getColorAngleText(),0)
+                ,Integer.valueOf(trackVideoRequest.getSizeTrailingPoint())));;
 
         File downloadedFile = null;
         try {

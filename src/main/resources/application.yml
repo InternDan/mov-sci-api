@@ -1,0 +1,84 @@
+spring:
+    cloud:
+        azure:
+            credential-file-path: my.azureauth
+            resource-group: Mov-Sci
+            region: East US
+            storage:
+                account: movsciuser
+            connString: DefaultEndpointsProtocol=https;AccountName=movsciuser;AccountKey=UftqpmI7hN1SZ+O6jXqKOuFmWxViBSrsYZBi5GzBVQmyj/rgZas/Tp7r6PZm9JEISXe047lPEo3qZryQadUygA==;
+            container: mov-sci
+//set tracking defaults
+tracking:
+    searchWindowSize: 20
+    searchEpsilon: 0.1
+    searchMaxLevel: 3
+    trackingSearchMinEigenThreshold: 0.001
+drawing:
+    point:
+        current:
+            color:
+                r: 255
+                g: 0
+                b: 0
+                a: 0
+            size: 6
+            lineType: 8
+        trailing:
+            color:
+                r: 0
+                g: 255
+                b: 0
+                a: 0
+            size: 5
+            lineType: 8
+    angle:
+        point:
+            color:
+                r: 0
+                g: 0
+                b: 255
+                a: 0
+            size: 6
+            lineType: 8
+        line:
+            color:
+                r: 123
+                g: 123
+                b: 0
+                a: 0
+            thickness: 1
+            lineType: 8
+        text:
+            font:
+                hscale: 1
+                vscale: 1
+                shear: 0
+                line_type: 8
+            fontFace: CV_FONT_HERSHEY_SIMPLEX
+            color:
+                r: 255
+                g: 0
+                b: 0
+                a: 0
+            fontScale: 5
+            thickness: 1
+    string:
+        font:
+            hscale: 1
+            vscale: 1
+            shear: 0
+            line_type: 8
+            fontFace: CV_FONT_HERSHEY_SIMPLEX
+            color:
+                r: 255
+                g: 0
+                b: 0
+                a: 0
+            fontScale: 5
+            thickness: 1
+
+
+secretKey: qwerty1234
+server:
+    port: 8081

@@ -1,6 +1,5 @@
 package com.movsci.processingapi.controller;
 
-import com.movsci.processingapi.Config.SecurityConfig;
 import com.movsci.processingapi.dto.FirstFrameRequest;
 import com.movsci.processingapi.dto.FirstFrameResponse;
 import com.movsci.processingapi.service.PictureService;
