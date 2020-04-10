@@ -20,15 +20,6 @@ import java.security.InvalidKeyException;
 @Slf4j
 public class SharedService {
 
-    @Value("${connString}")
-    private String connString;
-    @Value("${container}")
-    private String containerName;
-
-    CloudStorageAccount storageAccount;
-    CloudBlobClient blobClient = null;
-    CloudBlobContainer container=null;
-
     public String downloadFile(String blobName) throws IOException, URISyntaxException, InvalidKeyException, StorageException {
         //TODO: download file
         storageAccount = CloudStorageAccount.parse(connString);

@@ -1,6 +1,5 @@
 package com.movsci.processingapi.helpers;
 
-import com.movsci.processingapi.model.DrawingInformation;
 import com.movsci.processingapi.model.MovSciPoint;
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;

@@ -1,30 +1,16 @@
 package com.movsci.processingapi.model;
 
+import com.movsci.processingapi.config.PointTypes;
+import com.movsci.processingapi.config.defaults.drawing.point.current.DefaultCurrentPoint;
 import lombok.*;
 import org.opencv.core.Point;
-import org.opencv.core.Scalar;
+import org.springframework.beans.factory.annotation.Value;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class MovSciPoint {
-    String type;//pt,ln,ang2,ang3,ang4,tr
-    int trailingPoints = 0;
-    Scalar color = new Scalar(0,0,0,0);//duh
-    int thickness = 5;//duh
-    int lineType = 8;
-    int radius = 0;//radius
-    Point point;//x,y
-
-    public MovSciPoint(MovSciPoint movSciPoint){
-        this.type = movSciPoint.getType();
-        this.trailingPoints = movSciPoint.getTrailingPoints();
-        this.color = movSciPoint.getColor();
-        this.thickness = movSciPoint.getThickness();
-        this.lineType = movSciPoint.getLineType();
-        this.radius = movSciPoint.getRadius();
-        this.point = movSciPoint.getPoint();
-    }
+public class MovSciPoint extends DefaultCurrentPoint {
+    Point point;
+    String pointType;
 }

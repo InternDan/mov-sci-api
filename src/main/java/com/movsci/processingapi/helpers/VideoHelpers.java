@@ -1,6 +1,5 @@
 package com.movsci.processingapi.helpers;
 
-import com.movsci.processingapi.model.DrawingInformation;
 import com.movsci.processingapi.model.MovSciPoint;
 import lombok.extern.slf4j.Slf4j;
 import org.opencv.core.*;
