@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/angle/DefaultAngle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/angle/DefaultAnglePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/current/DefaultCurrentPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/trailing/DefaultTrailingPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/string/DefaultString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/DrawingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/DrawingInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/MovSciPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/MovSciPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/VideoTrackingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/VideoTrackingInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/DrawingDefaults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/PointTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/PointTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/PointTypes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
