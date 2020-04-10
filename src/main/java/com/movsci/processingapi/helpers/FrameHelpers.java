@@ -1,20 +1,13 @@
 package com.movsci.processingapi.helpers;
 
-import com.movsci.processingapi.Model.DrawingInformation;
-import com.movsci.processingapi.Model.MovSciPoint;
+import com.movsci.processingapi.model.DrawingInformation;
+import com.movsci.processingapi.model.MovSciPoint;
 import org.opencv.core.*;
-import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import static org.opencv.imgcodecs.Imgcodecs.imwrite;
 
 public class FrameHelpers {

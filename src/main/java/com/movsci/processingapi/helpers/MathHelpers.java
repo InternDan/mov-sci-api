@@ -1,6 +1,6 @@
 package com.movsci.processingapi.helpers;
 
-import com.movsci.processingapi.Model.MovSciPoint;
+import com.movsci.processingapi.model.MovSciPoint;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 

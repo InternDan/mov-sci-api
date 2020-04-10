@@ -1,7 +1,7 @@
 package com.movsci.processingapi.helpers;
 
-import com.movsci.processingapi.Model.DrawingInformation;
-import com.movsci.processingapi.Model.MovSciPoint;
+import com.movsci.processingapi.model.DrawingInformation;
+import com.movsci.processingapi.model.MovSciPoint;
 import lombok.extern.slf4j.Slf4j;
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
@@ -11,7 +11,6 @@ import org.opencv.videoio.VideoWriter;
 import org.opencv.videoio.Videoio;
 
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

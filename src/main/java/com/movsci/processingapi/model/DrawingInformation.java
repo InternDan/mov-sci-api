@@ -1,9 +1,7 @@
-package com.movsci.processingapi.Model;
+package com.movsci.processingapi.model;
 
 import lombok.*;
 import org.opencv.core.Scalar;
-
-import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor

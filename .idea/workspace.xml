@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efe3f260-2c27-49e3-b33c-ac3ed9b12937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/DrawingDefaults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/angle/DefaultAngle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/angle/DefaultAnglePoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/current/DefaultCurrentPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/point/trailing/DefaultTrailingPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/defaults/drawing/string/DefaultString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/processing-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Config/EmailConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Config/PictureConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Config/SharedConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Config/VideoConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/PictureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/DrawingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/DrawingInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/MovSciPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/MovSciPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/Model/VideoTrackingInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/model/VideoTrackingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/DrawingDefaults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/config/PointTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/FrameHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/MathHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/helpers/VideoHelpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movsci/processingapi/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="masterWindows" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,12 +72,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources" />
       <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources\azure" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\buffa\Documents\mov-sci-api\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,6 +147,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="960" y="440" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1584133310587" />
+    <state x="441" y="569" width="416" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586480266432">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="441" y="569" width="416" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1586480266432" />
     <state width="2517" height="320" key="GridCell.Tab.0.bottom" timestamp="1584134008808">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -163,6 +171,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="943" y="297" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1584151911559" />
+    <state x="303" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1586483046863">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="303" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1586483046863" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

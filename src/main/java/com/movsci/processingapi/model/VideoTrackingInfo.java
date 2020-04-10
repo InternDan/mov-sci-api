@@ -1,4 +1,4 @@
-package com.movsci.processingapi.Model;
+package com.movsci.processingapi.model;
 
 import lombok.*;
 

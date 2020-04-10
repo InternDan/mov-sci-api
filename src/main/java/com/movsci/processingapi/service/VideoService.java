@@ -1,8 +1,7 @@
 package com.movsci.processingapi.service;
 
 import com.microsoft.azure.storage.StorageException;
-import com.movsci.processingapi.Model.DrawingInformation;
-import com.movsci.processingapi.dto.FirstFrameResponse;
+import com.movsci.processingapi.model.DrawingInformation;
 import com.movsci.processingapi.dto.TrackVideoRequest;
 import com.movsci.processingapi.dto.TrackVideoResponse;
 import com.movsci.processingapi.helpers.MathHelpers;
